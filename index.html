@@ -1,96 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Lee</title>
 
-  <title>Andrew Lee</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">-->
+    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock 3D">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great">
+    <!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock 3D"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One">  
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Fredericka the Great"> 
-<!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
-    
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/templatemo-style.css">
-    
-  <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo-style.css">
 
-  
+    <link rel="stylesheet" href="css/nav.css">
 
-	</head>
+    <style>
+        /* Styles for loading animation */
+        body, html {
+            background-color: #000000; /* Start with a black background */
+        }
+        .background {
+            background: #000000; /* Remove the image background */
+            transition: background-color 1s ease;
+        }
+        .overlay {
+            background: linear-gradient(to bottom right, #000000, #01162A);
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+        #main-content {
+            display: block; /* Always display the main content */
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
 
-	<body style="background-color: black">
-        <!-- partial:index.partial.html -->
-                
-                <!-- partial -->
-      <!-- Header -->
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-			<div id="particles-js"></div>
-		
-<!--        List of images wanna run background-->
-			<ul class="cb-slideshow">
-	            <li></li>
-	            <li></li>
-	            <li></li>
-	            <li></li>
-	            <li></li>
-	            <li></li>
-	        </ul>
-<!--        List of images wanna run background-->
-			<div class="container-fluid">
-                
-				<div class="row cb-slideshow-text-container ">
-                    
-                    <nav class="tm-content ">
-                  <div class="navicon">
+        .background, .overlay, .loader, #main-content {
+            transition: opacity 1s ease;
+        }
+
+        .cube-container {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto 40px;
+            transform-style: preserve-3d;
+            animation: rotate 2s infinite linear;
+        }
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .front  { transform: rotateY(0deg) translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .top    { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+        .progress-bar {
+            width: 300px;
+            height: 4px;
+            background-color: #333;
+            margin: 20px auto;
+        }
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #ffffff;
+            transition: width 0.1s ;
+        }
+        .message {
+            color: #FFFFFF;
+            font-size: 21px;
+            font-family: 'Poiret One', serif;
+        }
+        @keyframes rotate {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+    </style>
+</head>
+<body>
+<div class="background"></div>
+<div class="overlay"></div>
+<div class="loader">
+    <div class="cube-container">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <div class="message">Welcome</div>
+</div>
+
+<div id="main-content">
+    <div id="particles-js"></div>
+
+    <!--        List of images wanna run background-->
+    <ul class="cb-slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--        List of images wanna run background-->
+    <div class="container-fluid">
+
+        <div class="row cb-slideshow-text-container ">
+
+            <nav class="tm-content ">
+                <div class="navicon">
                     <div></div>
-                  </div>
-                  <a href="#" onclick="blog(this);">Blogs</a>
-                  <a href="#" onclick="book(this);">Books</a>
-                  <a href="#" onclick="project(this);">Projects</a>   
-                  <a href="#">Stories</a>
-                  <a href="#">Lifestyle</a>
+                </div>
+                <a href="#" onclick="blog(this);">Blogs</a>
+                <a href="#" onclick="book(this);">Books</a>
+                <a href="#" onclick="project(this);">Projects</a>
+                <a href="#">Stories</a>
+                <a href="#">Lifestyle</a>
 
-                </nav>
-                        <div class= "tm-content col-xl-11  ml-auto section">
-                            <div id="Content_Nav">
-                                <header ><h1>Hi, I am Andrew</h1></header>
-                                <P >Welcome to my personal place! You can get evething from here with your respect! </P>
-                                <p class="mb-5">I'm a big fan of AI. I'm currently a PhD student within research domain in Computer Vision, Optimization and Time Series problems.
-                                <p >Thank you for visiting my site!</p>
+            </nav>
+            <div class= "tm-content col-xl-11  ml-auto section">
+                <div id="Content_Nav">
+                    <header ><h1>Hi, I am Andrew</h1></header>
+                    <P >Welcome to my personal site! You can get evething from here with your respect! </P>
+                    <p class="mb-5">I'm a big fan of AI. I'm currently a PhD student within research domain in Computer Vision, Optimization and Time Series problems.
+                    <p >Thank you for visiting my site!</p>
 
-                                <p>Check in <i class="fa fa-hand-o-down" style="font-size:24px"></i></p>
-
-
-                                <div class="tm-social-icons-container text-xs-center">
-                                    <a href="https://github.com/andrewlee1807" class="tm-social-link"><i class="fa fa-github"></i></a>
-                                    <a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/blackhole.large/" class="tm-social-link"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.flickr.com/photos/192362930@N04/albums" class="tm-social-link"><i class="fa fa-flickr"></i></a>
-                                    <a href="https://www.linkedin.com/in/anh-l%C3%AA-93b46b189/" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-				</div>	
-				<div class="footer-link">
-					<p>Copyright © 2021 Andrew Lee 
-                    
-                    </p>
-
-                    
-                    
-				</div>
-			</div>	
+                    <p>Check in <i class="fa fa-hand-o-down" style="font-size:24px"></i></p>
 
 
-	</body>
+                    <div class="tm-social-icons-container text-xs-center">
+                        <a href="https://github.com/andrewlee1807" class="tm-social-link"><i class="fa fa-github"></i></a>
+                        <a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/blackhole.large/" class="tm-social-link"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.flickr.com/photos/192362930@N04/albums" class="tm-social-link"><i class="fa fa-flickr"></i></a>
+                        <a href="https://www.linkedin.com/in/anh-l%C3%AA-93b46b189/" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
 
-	<script type="text/javascript" src="js/particles.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/nagvigate.js"></script>
+        </div>
+        <div class="footer-link">
+            <p>Copyright © 2021 Andrew Lee
+
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function simulateLoading() {
+        const progress = document.querySelector('.progress');
+        const background = document.querySelector('.background');
+        const overlay = document.querySelector('.overlay');
+        const loader = document.querySelector('.loader');
+        const mainContent = document.getElementById('main-content');
+        let width = 10;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                fadeOutLoading();
+            } else {
+                width++;
+                progress.style.width = width + '%';
+                background.style.backgroundColor = `rgb(${Math.round(1 * width / 100)}, ${Math.round(22 * width / 100)}, ${Math.round(42 * width / 100)})`;
+            }
+        }, 8);
+
+        function fadeOutLoading() {
+            overlay.style.opacity = '0';
+            loader.style.opacity = '0';
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                loader.style.display = 'none';
+                fadeInMainContent();
+            }, 1000);
+        }
+
+        function fadeInMainContent() {
+            mainContent.style.opacity = '1';
+        }
+    }
+
+    window.addEventListener('load', simulateLoading);
+</script>
+
+
+
+<script type="text/javascript" src="js/particles.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/nagvigate.js"></script>
+
+</body>
 </html>
