@@ -4,8 +4,16 @@
 function generateListHTML(dataItem) {
     if (!dataItem || dataItem.length === 0) return '<p class="welcome-text">No content available.</p>';
 
+    // Sort data by date descending (newest first)
+    // Create a shallow copy to avoid mutating the original array
+    const sortedData = [...dataItem].sort((a, b) => {
+        const dateA = new Date(a.date || '1970-01-01');
+        const dateB = new Date(b.date || '1970-01-01');
+        return dateB - dateA;
+    });
+
     let html = '<ul class="content-list">';
-    dataItem.forEach(item => {
+    sortedData.forEach(item => {
         html += `
         <li>
             <a href="${item.link}" target="_blank">${item.title}</a>
