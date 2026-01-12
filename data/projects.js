@@ -34,5 +34,11 @@ const PROJECTS_DATA = [
         link: "#",
         description: "(Work in Progress) Autonomous agent for research paper retrieval.",
         date: "2024-11-01"
+    },
+    {
+        title: "The Periodic Table of AI",
+        link: "https://andrewlee1807.github.io/projects/periodic%20table/",
+        description: "Comprehensive overview of AI concepts and technologies.",
+        date: "2026-1-12"
     }
 ];
