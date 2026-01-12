@@ -1,0 +1,319 @@
+:root {
+    --bg-color: #0a0a0f;
+    --text-color: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --primary-glow: rgba(0, 255, 255, 0.3);
+    --font-main: 'Outfit', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.gradient-sphere {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(76, 29, 149, 0.4) 0%, rgba(10, 10, 15, 0) 70%);
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-50px, 50px); }
+}
+
+.container {
+    width: 95%;
+    max-width: 1600px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+.subtitle {
+    font-family: var(--font-mono);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Periodic Table Grid */
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr); /* Estimated rows */
+    gap: 8px;
+    padding: 20px;
+    /* Basic Layout for wide screens */
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Element Card */
+.element {
+    aspect-ratio: 1; /* Square */
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 70px; /* Minimum size */
+}
+
+.element:hover {
+    transform: scale(1.2) translateY(-10px);
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 10px var(--element-color);
+    border-color: var(--element-color);
+}
+
+.element-number {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-mono);
+}
+
+.element-symbol {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    /* Fallback color */
+    color: #fff; 
+}
+
+.element-name {
+    font-size: 0.65rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #1a1a20;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.element-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.modal-title-group h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-body p {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    background: cyan;
+}
+
+.hidden {
+    display: none; /* Just helper, opacity handles transition */
+}
+
+/* Tooltip (Hover Card) - Optional if not using Modal on hover, but user asked for "show some info on hover" */
+/* We can do a tooltip or use the modal on click. Let's do a quick tooltip on hover maybe? 
+   Actually user said: "when mouse hangover element will show some information"
+   Let's append a small tooltip to the element itself or a fixed info box.
+   Due to grid constraints, a fixed info box/HUD might be better, OR simple tooltip.
+   I'll stick to a nice tooltip for now.
+*/
+
+.tooltip {
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 20;
+    text-align: left;
+}
+
+.element:hover .tooltip {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .periodic-table {
+        /* On simplified mobile view, maybe just a flex list? Or scrollable grid. 
+           Scrollable grid is more "scientific".
+        */
+        padding-bottom: 50px;
+    }
+}
