@@ -70,7 +70,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: project/periodic%20table                   # ← your build output directory
+          folder: projects/periodic table                   # ← your build output directory
           branch: development                # ← target branch (must match Pages setting)
           target-folder: ${{ steps.target.outputs.subfolder }}
           clean: true                     # recommended – removes old files
