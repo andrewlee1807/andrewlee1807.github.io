@@ -1,0 +1,846 @@
+{
+  "categories": {
+    "Architecture": {
+      "color": "#2196F3",
+      "description": "Fundamental structural designs (Transformers, RNNs, etc.)"
+    },
+    "Learning": {
+      "color": "#9C27B0",
+      "description": "Learning paradigms (Supervised, RL, etc.)"
+    },
+    "LLMs": {
+      "color": "#F44336",
+      "description": "Foundation Large Language Models"
+    },
+    "Generative": {
+      "color": "#4CAF50",
+      "description": "Image and Content Generation Models"
+    },
+    "Multimodal": {
+      "color": "#673AB7",
+      "description": "Models handling multiple data types (Vision, Audio, Text)"
+    },
+    "Agents": {
+      "color": "#00BCD4",
+      "description": "Autonomous agents and reasoning frameworks"
+    },
+    "Applications": {
+      "color": "#FFC107",
+      "description": "Applied AI and Coding Tools"
+    },
+    "Data": {
+      "color": "#FF9800",
+      "description": "Data processing, tokenization, and embeddings"
+    },
+    "Optimization": {
+      "color": "#E91E63",
+      "description": "Optimization algorithms and regularization"
+    },
+    "Classical": {
+      "color": "#607D8B",
+      "description": "Classical Machine Learning Algorithms"
+    }
+  },
+  "elements": [
+    {
+      "number": 1,
+      "symbol": "Tf",
+      "name": "Transformer",
+      "category": "Architecture",
+      "description": "Self-attention mechanism architecture.",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "number": 2,
+      "symbol": "Nn",
+      "name": "Neural Net",
+      "category": "Architecture",
+      "description": "Basic artificial neural network.",
+      "url": "https://en.wikipedia.org/wiki/Neural_network",
+      "row": 1,
+      "col": 18
+    },
+    {
+      "number": 3,
+      "symbol": "Enc",
+      "name": "Encoder",
+      "category": "Architecture",
+      "description": "Part of model that processes input.",
+      "url": "https://en.wikipedia.org/wiki/Autoencoder",
+      "row": 2,
+      "col": 1
+    },
+    {
+      "number": 4,
+      "symbol": "Dec",
+      "name": "Decoder",
+      "category": "Architecture",
+      "description": "Part of model that generates output.",
+      "url": "https://en.wikipedia.org/wiki/Autoencoder",
+      "row": 2,
+      "col": 2
+    },
+    {
+      "number": 5,
+      "symbol": "CNN",
+      "name": "CNN",
+      "category": "Architecture",
+      "description": "Convolutional Neural Network.",
+      "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+      "row": 2,
+      "col": 14
+    },
+    {
+      "number": 6,
+      "symbol": "RNN",
+      "name": "RNN",
+      "category": "Architecture",
+      "description": "Recurrent Neural Network.",
+      "url": "https://en.wikipedia.org/wiki/Recurrent_neural_network",
+      "row": 2,
+      "col": 15
+    },
+    {
+      "number": 7,
+      "symbol": "LST",
+      "name": "LSTM",
+      "category": "Architecture",
+      "description": "Long Short-Term Memory.",
+      "url": "https://en.wikipedia.org/wiki/Long_short-term_memory",
+      "row": 2,
+      "col": 16
+    },
+    {
+      "number": 8,
+      "symbol": "GRI",
+      "name": "GRU",
+      "category": "Architecture",
+      "description": "Gated Recurrent Unit.",
+      "url": "https://en.wikipedia.org/wiki/Gated_recurrent_unit",
+      "row": 2,
+      "col": 17
+    },
+    {
+      "number": 9,
+      "symbol": "Moe",
+      "name": "MoE",
+      "category": "Architecture",
+      "description": "Mixture of Experts.",
+      "url": "https://arxiv.org/abs/1701.06538",
+      "row": 2,
+      "col": 18
+    },
+    {
+      "number": 10,
+      "symbol": "Sup",
+      "name": "Supervised",
+      "category": "Learning",
+      "description": "Learning from labeled data.",
+      "url": "https://en.wikipedia.org/wiki/Supervised_learning",
+      "row": 3,
+      "col": 1
+    },
+    {
+      "number": 11,
+      "symbol": "Uns",
+      "name": "Unsupervised",
+      "category": "Learning",
+      "description": "Learning from unlabeled data.",
+      "url": "https://en.wikipedia.org/wiki/Unsupervised_learning",
+      "row": 3,
+      "col": 2
+    },
+    {
+      "number": 12,
+      "symbol": "Sem",
+      "name": "Semi-Sup",
+      "category": "Learning",
+      "description": "Semi-supervised learning.",
+      "url": "https://en.wikipedia.org/wiki/Semi-supervised_learning",
+      "row": 3,
+      "col": 3
+    },
+    {
+      "number": 13,
+      "symbol": "RL",
+      "name": "RL",
+      "category": "Learning",
+      "description": "Reinforcement Learning.",
+      "url": "https://en.wikipedia.org/wiki/Reinforcement_learning",
+      "row": 3,
+      "col": 14
+    },
+    {
+      "number": 14,
+      "symbol": "RLH",
+      "name": "RLHF",
+      "category": "Learning",
+      "description": "RL with Human Feedback.",
+      "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
+      "row": 3,
+      "col": 15
+    },
+    {
+      "number": 15,
+      "symbol": "DPO",
+      "name": "DPO",
+      "category": "Learning",
+      "description": "Direct Preference Optimization.",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "row": 3,
+      "col": 16
+    },
+    {
+      "number": 16,
+      "symbol": "ICL",
+      "name": "ICL",
+      "category": "Learning",
+      "description": "In-Context Learning.",
+      "url": "https://arxiv.org/abs/2301.00234",
+      "row": 3,
+      "col": 17
+    },
+    {
+      "number": 17,
+      "symbol": "LoR",
+      "name": "LoRA",
+      "category": "Learning",
+      "description": "Low-Rank Adaptation.",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "row": 3,
+      "col": 18
+    },
+    {
+      "number": 18,
+      "symbol": "GPT",
+      "name": "GPT-4",
+      "category": "LLMs",
+      "description": "OpenAI's foundational model.",
+      "url": "https://openai.com/gpt-4",
+      "row": 4,
+      "col": 1
+    },
+    {
+      "number": 19,
+      "symbol": "CLD",
+      "name": "Claude",
+      "category": "LLMs",
+      "description": "Anthropic's LLM.",
+      "url": "https://www.anthropic.com/claude",
+      "row": 4,
+      "col": 2
+    },
+    {
+      "number": 20,
+      "symbol": "GEM",
+      "name": "Gemini",
+      "category": "LLMs",
+      "description": "Google's multimodal model.",
+      "url": "https://deepmind.google/technologies/gemini/",
+      "row": 4,
+      "col": 3
+    },
+    {
+      "number": 21,
+      "symbol": "LMA",
+      "name": "Llama",
+      "category": "LLMs",
+      "description": "Meta's open LLM.",
+      "url": "https://llama.meta.com/",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "number": 22,
+      "symbol": "MIS",
+      "name": "Mistral",
+      "category": "LLMs",
+      "description": "Mistral AI's model.",
+      "url": "https://mistral.ai/",
+      "row": 4,
+      "col": 5
+    },
+    {
+      "number": 23,
+      "symbol": "QWU",
+      "name": "Qwen",
+      "category": "LLMs",
+      "description": "Alibaba's LLM.",
+      "url": "https://github.com/QwenLM/Qwen",
+      "row": 4,
+      "col": 6
+    },
+    {
+      "number": 24,
+      "symbol": "DSK",
+      "name": "DeepSeek",
+      "category": "LLMs",
+      "description": "DeepSeek Coder/Chat models.",
+      "url": "https://deepseek.com/",
+      "row": 4,
+      "col": 7
+    },
+    {
+      "number": 25,
+      "symbol": "GRK",
+      "name": "Grok",
+      "category": "LLMs",
+      "description": "xAI's model.",
+      "url": "https://grok.x.ai/",
+      "row": 4,
+      "col": 8
+    },
+    {
+      "number": 26,
+      "symbol": "BRT",
+      "name": "BERT",
+      "category": "LLMs",
+      "description": "Bidirectional Encoder Representations.",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "row": 4,
+      "col": 14
+    },
+    {
+      "number": 27,
+      "symbol": "T5",
+      "name": "T5",
+      "category": "LLMs",
+      "description": "Text-to-Text Transfer Transformer.",
+      "url": "https://arxiv.org/abs/1910.10683",
+      "row": 4,
+      "col": 15
+    },
+    {
+      "number": 28,
+      "symbol": "RDB",
+      "name": "RoBERTa",
+      "category": "LLMs",
+      "description": "Robustly optimized BERT.",
+      "url": "https://arxiv.org/abs/1907.11692",
+      "row": 4,
+      "col": 16
+    },
+    {
+      "number": 29,
+      "symbol": "PHI",
+      "name": "Phi",
+      "category": "LLMs",
+      "description": "Microsoft's small language model.",
+      "url": "https://arxiv.org/abs/2306.11644",
+      "row": 4,
+      "col": 17
+    },
+    {
+      "number": 30,
+      "symbol": "FAL",
+      "name": "Falcon",
+      "category": "LLMs",
+      "description": "TII's open LLM.",
+      "url": "https://falconllm.tii.ae/",
+      "row": 4,
+      "col": 18
+    },
+    {
+      "number": 31,
+      "symbol": "DIT",
+      "name": "Diffusion",
+      "category": "Generative",
+      "description": "Diffusion Probabilistic Models.",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "row": 5,
+      "col": 1
+    },
+    {
+      "number": 32,
+      "symbol": "GAN",
+      "name": "GAN",
+      "category": "Generative",
+      "description": "Generative Adversarial Nets.",
+      "url": "https://en.wikipedia.org/wiki/Generative_adversarial_network",
+      "row": 5,
+      "col": 2
+    },
+    {
+      "number": 33,
+      "symbol": "VAE",
+      "name": "VAE",
+      "category": "Generative",
+      "description": "Variational Autoencoder.",
+      "url": "https://en.wikipedia.org/wiki/Variational_autoencoder",
+      "row": 5,
+      "col": 3
+    },
+    {
+      "number": 34,
+      "symbol": "FLO",
+      "name": "Flow",
+      "category": "Generative",
+      "description": "Normalizing Flows.",
+      "url": "https://arxiv.org/abs/1912.02762",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "number": 35,
+      "symbol": "ARM",
+      "name": "Autoreg",
+      "category": "Generative",
+      "description": "Autoregressive Models.",
+      "url": "https://en.wikipedia.org/wiki/Autoregressive_model",
+      "row": 5,
+      "col": 5
+    },
+    {
+      "number": 36,
+      "symbol": "SD",
+      "name": "Stable Diff",
+      "category": "Generative",
+      "description": "Stable Diffusion.",
+      "url": "https://stability.ai/",
+      "row": 5,
+      "col": 14
+    },
+    {
+      "number": 37,
+      "symbol": "DLE",
+      "name": "DALL-E",
+      "category": "Generative",
+      "description": "OpenAI's image generator.",
+      "url": "https://openai.com/dall-e-3",
+      "row": 5,
+      "col": 15
+    },
+    {
+      "number": 38,
+      "symbol": "MJ",
+      "name": "Midjourney",
+      "category": "Generative",
+      "description": "Artistic image generator.",
+      "url": "https://www.midjourney.com/",
+      "row": 5,
+      "col": 16
+    },
+    {
+      "number": 39,
+      "symbol": "SRA",
+      "name": "Sora",
+      "category": "Generative",
+      "description": "Video generation model.",
+      "url": "https://openai.com/sora",
+      "row": 5,
+      "col": 17
+    },
+    {
+      "number": 40,
+      "symbol": "FLX",
+      "name": "Flux",
+      "category": "Generative",
+      "description": "Black Forest Labs image model.",
+      "url": "https://blackforestlabs.ai/",
+      "row": 5,
+      "col": 18
+    },
+    {
+      "number": 41,
+      "symbol": "CLP",
+      "name": "CLIP",
+      "category": "Multimodal",
+      "description": "Contrastive Language-Image Pre-training.",
+      "url": "https://openai.com/research/clip",
+      "row": 6,
+      "col": 1
+    },
+    {
+      "number": 42,
+      "symbol": "VIT",
+      "name": "ViT",
+      "category": "Multimodal",
+      "description": "Vision Transformer.",
+      "url": "https://arxiv.org/abs/2010.11929",
+      "row": 6,
+      "col": 2
+    },
+    {
+      "number": 43,
+      "symbol": "SIG",
+      "name": "SigLIP",
+      "category": "Multimodal",
+      "description": "Sigmoid Loss for Language Image Pre-training.",
+      "url": "https://arxiv.org/abs/2303.15343",
+      "row": 6,
+      "col": 3
+    },
+    {
+      "number": 44,
+      "symbol": "LVA",
+      "name": "LLaVA",
+      "category": "Multimodal",
+      "description": "Large Language and Vision Assistant.",
+      "url": "https://llava-vl.github.io/",
+      "row": 6,
+      "col": 4
+    },
+    {
+      "number": 45,
+      "symbol": "G4V",
+      "name": "GPT-4V",
+      "category": "Multimodal",
+      "description": "GPT-4 with Vision.",
+      "url": "https://openai.com/research/gpt-4v-system-card",
+      "row": 6,
+      "col": 5
+    },
+    {
+      "number": 46,
+      "symbol": "WSP",
+      "name": "Whisper",
+      "category": "Multimodal",
+      "description": "Speech recognition model.",
+      "url": "https://openai.com/research/whisper",
+      "row": 6,
+      "col": 14
+    },
+    {
+      "number": 47,
+      "symbol": "TTS",
+      "name": "TTS",
+      "category": "Multimodal",
+      "description": "Text-to-Speech models.",
+      "url": "#",
+      "row": 6,
+      "col": 15
+    },
+    {
+      "number": 48,
+      "symbol": "SAM",
+      "name": "SAM",
+      "category": "Multimodal",
+      "description": "Segment Anything Model.",
+      "url": "https://segment-anything.com/",
+      "row": 6,
+      "col": 16
+    },
+    {
+      "number": 49,
+      "symbol": "DiT",
+      "name": "DiT",
+      "category": "Multimodal",
+      "description": "Diffusion Transformer.",
+      "url": "https://arxiv.org/abs/2212.09748",
+      "row": 6,
+      "col": 17
+    },
+    {
+      "number": 50,
+      "symbol": "VLM",
+      "name": "VLM",
+      "category": "Multimodal",
+      "description": "Vision Language Models.",
+      "url": "#",
+      "row": 6,
+      "col": 18
+    },
+    {
+      "number": 51,
+      "symbol": "AGT",
+      "name": "Agents",
+      "category": "Agents",
+      "description": "Autonomous AI Agents.",
+      "url": "#",
+      "row": 7,
+      "col": 1
+    },
+    {
+      "number": 52,
+      "symbol": "RAG",
+      "name": "RAG",
+      "category": "Agents",
+      "description": "Retrieval-Augmented Generation.",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "row": 7,
+      "col": 2
+    },
+    {
+      "number": 53,
+      "symbol": "CoT",
+      "name": "CoT",
+      "category": "Agents",
+      "description": "Chain-of-Thought prompting.",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "row": 7,
+      "col": 3
+    },
+    {
+      "number": 54,
+      "symbol": "ReA",
+      "name": "ReAct",
+      "category": "Agents",
+      "description": "Reasoning and Acting.",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "row": 7,
+      "col": 4
+    },
+    {
+      "number": 55,
+      "symbol": "ToT",
+      "name": "ToT",
+      "category": "Agents",
+      "description": "Tree of Thoughts.",
+      "url": "https://arxiv.org/abs/2305.10601",
+      "row": 7,
+      "col": 5
+    },
+    {
+      "number": 56,
+      "symbol": "MAS",
+      "name": "Multi-Agent",
+      "category": "Agents",
+      "description": "Multi-Agent Systems.",
+      "url": "#",
+      "row": 7,
+      "col": 6
+    },
+    {
+      "number": 57,
+      "symbol": "COD",
+      "name": "Codex",
+      "category": "Applications",
+      "description": "AI model for code generation.",
+      "url": "https://openai.com/blog/openai-codex",
+      "row": 7,
+      "col": 14
+    },
+    {
+      "number": 58,
+      "symbol": "CPL",
+      "name": "Copilot",
+      "category": "Applications",
+      "description": "GitHub Copilot.",
+      "url": "https://github.com/features/copilot",
+      "row": 7,
+      "col": 15
+    },
+    {
+      "number": 59,
+      "symbol": "CUR",
+      "name": "Cursor",
+      "category": "Applications",
+      "description": "The AI Code Editor.",
+      "url": "https://cursor.com/",
+      "row": 7,
+      "col": 16
+    },
+    {
+      "number": 60,
+      "symbol": "SRC",
+      "name": "Source",
+      "category": "Applications",
+      "description": "Source code analysis.",
+      "url": "#",
+      "row": 7,
+      "col": 17
+    },
+    {
+      "number": 61,
+      "symbol": "AST",
+      "name": "Assistant",
+      "category": "Applications",
+      "description": "AI Assistants.",
+      "url": "#",
+      "row": 7,
+      "col": 18
+    },
+    {
+      "number": 62,
+      "symbol": "EMB",
+      "name": "Embedding",
+      "category": "Data",
+      "description": "Vector representations of data.",
+      "url": "https://en.wikipedia.org/wiki/Word_embedding",
+      "row": 8,
+      "col": 1
+    },
+    {
+      "number": 63,
+      "symbol": "TOK",
+      "name": "Token",
+      "category": "Data",
+      "description": "Tokenization.",
+      "url": "#",
+      "row": 8,
+      "col": 2
+    },
+    {
+      "number": 64,
+      "symbol": "VDB",
+      "name": "VectorDB",
+      "category": "Data",
+      "description": "Vector Databases (Pinecone, etc.).",
+      "url": "#",
+      "row": 8,
+      "col": 3
+    },
+    {
+      "number": 65,
+      "symbol": "BPE",
+      "name": "BPE",
+      "category": "Data",
+      "description": "Byte Pair Encoding.",
+      "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding",
+      "row": 8,
+      "col": 4
+    },
+    {
+      "number": 66,
+      "symbol": "SGD",
+      "name": "SGD",
+      "category": "Optimization",
+      "description": "Stochastic Gradient Descent.",
+      "url": "#",
+      "row": 8,
+      "col": 14
+    },
+    {
+      "number": 67,
+      "symbol": "ADM",
+      "name": "Adam",
+      "category": "Optimization",
+      "description": "Adaptive Moment Estimation.",
+      "url": "#",
+      "row": 8,
+      "col": 15
+    },
+    {
+      "number": 68,
+      "symbol": "DRP",
+      "name": "Dropout",
+      "category": "Optimization",
+      "description": "Regularization technique.",
+      "url": "#",
+      "row": 8,
+      "col": 16
+    },
+    {
+      "number": 69,
+      "symbol": "BN",
+      "name": "Batch Norm",
+      "category": "Optimization",
+      "description": "Batch Normalization.",
+      "url": "#",
+      "row": 8,
+      "col": 17
+    },
+    {
+      "number": 70,
+      "symbol": "LN",
+      "name": "Layer Norm",
+      "category": "Optimization",
+      "description": "Layer Normalization.",
+      "url": "#",
+      "row": 8,
+      "col": 18
+    },
+    {
+      "number": 71,
+      "symbol": "LR",
+      "name": "Lin Reg",
+      "category": "Classical",
+      "description": "Linear Regression.",
+      "url": "https://en.wikipedia.org/wiki/Linear_regression",
+      "row": 10,
+      "col": 4
+    },
+    {
+      "number": 72,
+      "symbol": "LGR",
+      "name": "Log Reg",
+      "category": "Classical",
+      "description": "Logistic Regression.",
+      "url": "https://en.wikipedia.org/wiki/Logistic_regression",
+      "row": 10,
+      "col": 5
+    },
+    {
+      "number": 73,
+      "symbol": "SVM",
+      "name": "SVM",
+      "category": "Classical",
+      "description": "Support Vector Machine.",
+      "url": "https://en.wikipedia.org/wiki/Support_vector_machine",
+      "row": 10,
+      "col": 6
+    },
+    {
+      "number": 74,
+      "symbol": "DT",
+      "name": "Dec Tree",
+      "category": "Classical",
+      "description": "Decision Trees.",
+      "url": "https://en.wikipedia.org/wiki/Decision_tree",
+      "row": 10,
+      "col": 7
+    },
+    {
+      "number": 75,
+      "symbol": "RF",
+      "name": "Rand Forest",
+      "category": "Classical",
+      "description": "Random Forest.",
+      "url": "https://en.wikipedia.org/wiki/Random_forest",
+      "row": 10,
+      "col": 8
+    },
+    {
+      "number": 76,
+      "symbol": "XGB",
+      "name": "XGBoost",
+      "category": "Classical",
+      "description": "Extreme Gradient Boosting.",
+      "url": "https://en.wikipedia.org/wiki/XGBoost",
+      "row": 10,
+      "col": 9
+    },
+    {
+      "number": 77,
+      "symbol": "KNN",
+      "name": "KNN",
+      "category": "Classical",
+      "description": "K-Nearest Neighbors.",
+      "url": "https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm",
+      "row": 10,
+      "col": 10
+    },
+    {
+      "number": 78,
+      "symbol": "NB",
+      "name": "Naive Bayes",
+      "category": "Classical",
+      "description": "Naive Bayes Classifiers.",
+      "url": "https://en.wikipedia.org/wiki/Naive_Bayes_classifier",
+      "row": 10,
+      "col": 11
+    },
+    {
+      "number": 79,
+      "symbol": "PCA",
+      "name": "PCA",
+      "category": "Classical",
+      "description": "Principal Component Analysis.",
+      "url": "https://en.wikipedia.org/wiki/Principal_component_analysis",
+      "row": 10,
+      "col": 12
+    },
+    {
+      "number": 80,
+      "symbol": "KNS",
+      "name": "K-Means",
+      "category": "Classical",
+      "description": "K-Means Clustering.",
+      "url": "https://en.wikipedia.org/wiki/K-means_clustering",
+      "row": 10,
+      "col": 13
+    }
+  ]
+}
