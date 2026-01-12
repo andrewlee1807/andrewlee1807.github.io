@@ -52,11 +52,6 @@ jobs:
       - uses: actions/checkout@v4
 
       # ── Your build steps here ──
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
 
       # Decide path & branch
       - name: Determine deploy target
